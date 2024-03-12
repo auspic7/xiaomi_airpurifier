@@ -136,6 +136,7 @@ MODEL_AIRHUMIDIFIER_MJJSQ = "deerma.humidifier.mjjsq"
 MODEL_AIRHUMIDIFIER_JSQ = "deerma.humidifier.jsq"
 MODEL_AIRHUMIDIFIER_JSQ1 = "deerma.humidifier.jsq1"
 MODEL_AIRHUMIDIFIER_JSQ2W = "deerma.humidifier.jsq2w"
+MODEL_AIRHUMIDIFIER_JSQ2G = "deerma.humidifier.jsq2g"
 MODEL_AIRHUMIDIFIER_JSQ3 = "deerma.humidifier.jsq3"
 MODEL_AIRHUMIDIFIER_JSQ5 = "deerma.humidifier.jsq5"
 MODEL_AIRHUMIDIFIER_JSQS = "deerma.humidifier.jsqs"
@@ -197,6 +198,7 @@ PLATFORM_SCHEMA = PLATFORM_SCHEMA.extend(
                 MODEL_AIRHUMIDIFIER_JSQ,
                 MODEL_AIRHUMIDIFIER_JSQ1,
                 MODEL_AIRHUMIDIFIER_JSQ2W,
+                MODEL_AIRHUMIDIFIER_JSQ2G,
                 MODEL_AIRHUMIDIFIER_JSQ3,
                 MODEL_AIRHUMIDIFIER_JSQ5,
                 MODEL_AIRHUMIDIFIER_JSQS,
@@ -1151,6 +1153,7 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
         device = XiaomiAirHumidifierMjjsq(name, air_humidifier, model, unique_id)
     elif model in [
         MODEL_AIRHUMIDIFIER_JSQ2W,
+        MODEL_AIRHUMIDIFIER_JSQ2G,
         MODEL_AIRHUMIDIFIER_JSQ3,
         MODEL_AIRHUMIDIFIER_JSQ5,
         MODEL_AIRHUMIDIFIER_JSQS,
